@@ -3,17 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>russrizzo.net</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" /> 
-            
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 </head>
 <body>
 
@@ -103,25 +96,8 @@
         </article>
     </div>
 
+    <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+  	<script type="text/javascript" src="js/jquery.js"></script>
 </body>
-
-<!-- JQUERY: THIS IS HOW THE MAGIC HAPPENS! USE THIS BUT REPLACE #PARAGRAPH WITH WHATEVER YOUR TEXT IS CALLED -->
-
-<script type="text/javascript">
-                    
-    "use strict";
-
-        $("#paragraph a span").hide();
-        $('#paragraph a').mousemove(function(e) { 
-            $(this).find("span").stop(1, 1).fadeIn();
-            $("#paragraph a span").offset({
-                top: e.pageY - ($("#paragraph a span").outerHeight()/2),
-                left: e.pageX - ($("#paragraph a span").outerWidth()/2)
-            });
-        }).mouseleave(function() {
-            $("#paragraph a span").fadeOut();
-        }); 
-
-</script>
 
 </html>
