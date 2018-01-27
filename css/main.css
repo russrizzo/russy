@@ -46,6 +46,11 @@ h3 {
     font-size: 24px;
 }
 
+h4 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
 p {
     font-size: 20px;
     line-height: 180%;
@@ -125,6 +130,20 @@ p {
     max-width: 45%;
 }
 
+#carly {
+    position: relative;
+    padding: 10em 10em 0 10em;
+}
+
+#number {
+    z-index: 3;
+    position: absolute;
+    margin: 0;
+    font-size: 56px;
+    top: 250px;
+    left: 700px;
+}
+
 /* MOBILE AND TABLET RESPONSE AND ORDERING */
 @media screen and (max-width: 400px) {
   .wrapper {
@@ -160,7 +179,20 @@ p {
   .graybox {
     grid-column: 1 / -1;
     padding: 0 2em 0 2em;
-}
+  }
+  h4 {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  #carly {
+    padding: 3em 0 0 0;
+    max-width: 80%;
+  }
+  #number {
+    font-size: 42px;
+    top: 60%;
+    left: 15%;
+  }
 }
 
 @media (min-width: 700px) {
