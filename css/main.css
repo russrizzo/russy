@@ -1,0 +1,204 @@
+* {box-sizing: border-box;}
+
+    .wrapper {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+/* DESIGN CHANGES */
+html, body {
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 100%;
+    margin: 0px;
+    font-family: "Source Code Pro", monospace;
+    }
+
+li {
+    text-decoration: underline;
+    list-style-type: none;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 180%;
+    font-weight: 100;
+}
+
+/* CONTENT CHANGES*/
+.main-head {
+  grid-area: header;
+  line-height: 1em;
+  padding-top: 25%;
+  z-index: 1;
+  text-align: right;
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Safari 3-8 */
+    transform: rotate(270deg);
+    height: 290px;
+    width: 290px;
+}
+.content {
+  grid-area: content;
+  background-color: #cccccc;
+  border: 1px solid #000;
+}
+.main-nav {
+  grid-area: nav;
+  line-height: 230%;
+  padding-top: 8em;
+  z-index: 2;
+}
+.avatar {
+    grid-area: avatar;
+    padding: 2em 0 2em 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "content"
+    "avatar";
+}
+
+.project-item {
+    grid-column: 1 / -1;
+    display: flex;
+    background-color: #cccccc;
+    align-items: center;
+    padding: 20px 60px 20px 60px;
+    border: 1px black solid;
+}
+
+.project-item > div:nth-child(3) {
+    margin-left: auto;
+}
+
+.project-item :nth-child(2) {
+    padding: 0 40px;
+}
+
+.graybox {
+    grid-column: 1 / -1;
+    padding: 0 6em 5em 6em;
+}
+
+.wrapper > div {
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    text-align: center;
+}
+
+#russ {
+    max-width: 45%;
+}
+
+/* MOBILE AND TABLET RESPONSE AND ORDERING */
+@media screen and (max-width: 400px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header  nav"
+      "content content";
+  }
+  nav ul {
+    display: inherit;
+    justify-content: space-evenly;
+    padding: 0 1em 0 0.6em;
+  }
+  .main-nav {
+      padding-top: 2em;
+      height: 290px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .avatar {
+    visibility: hidden;
+  }
+  .main-head {
+    width: 260px;
+    padding-top: 20%;
+  }
+  .graybox {
+    grid-column: 1 / -1;
+    padding: 0 2em 0 2em;
+}
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+      "header content"
+      "nav content"
+      "avatar content"
+   }
+   nav ul {
+     flex-direction: column;
+   }
+}
+
+/* STYLES: MOST IMPORTANT IS THE SPAN SET TO POSITION:ABSOLUTE AND Z-INDEX IF YOU WANT IT BEHIND THE TEXT */
+    #paragraph {
+        margin-top:100px;
+        width:70%;
+        margin-left:auto;
+        margin-right:auto;
+        line-height:60px;
+        font-size:32px;
+        font-family:Arial;
+        color:#000;
+    }
+
+    #paragraph a {
+        color:#000;
+        text-decoration: underline;
+    }
+
+    #paragraph a span {
+        position:absolute;
+        z-index:-99999;
+    }
+
+    .project-item a span {
+        position: absolute;
+        z-index: 99999;
+    }
