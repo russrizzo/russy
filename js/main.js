@@ -6,3 +6,18 @@ if(s==2){document.title=''+T+'';}
 if(C<(8*reps)){sT=setTimeout("A()",speed);C++;}
 else{C=0;s=0;mC++;if(mC>p-1)mC=0;sT=null;doTheThing();}}
 doTheThing();
+
+/* franny's link magic */
+
+"use strict";
+
+        $("#franny a span").hide();
+        $('#franny a').mousemove(function(e) { 
+            $(this).find("span").stop(1, 1).fadeIn();
+            $("#franny a span").offset({
+                top: e.pageY - ($("#franny a span").outerHeight()/2),
+                left: e.pageX - ($("#franny a span").outerWidth()/2)
+            });
+        }).mouseleave(function() {
+            $("#franny a span").fadeOut();
+        });
